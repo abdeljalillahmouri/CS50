@@ -13,12 +13,12 @@ int count_sentences(string text);
 int main(void) 
 {
     string Text = get_string("text: ");
-    // count_letter(Text);
-    // count_words(Text);
-    // count_sentences(Text);
+    
     int L = 100 * count_letter(Text) / count_words(Text);
     int S = 100 * count_sentences(Text) / count_words(Text);
+    
     float index = 0.0588 * L - 0.296 * S - 15.8;
+    
     printf("Grade %i", (int) round(index));
     printf("\n");
 }
